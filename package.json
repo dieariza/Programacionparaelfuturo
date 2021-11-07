@@ -1,0 +1,28 @@
+{
+  "name": "programacionparaelfuturo",
+  "version": "1.0.0",
+  "description": "proyecto backend programacion para el futuro B32-3",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dieariza/Programacionparaelfuturo.git"
+  },
+  "author": "Diego Ariza @dieariza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dieariza/Programacionparaelfuturo/issues"
+  },
+  "homepage": "https://github.com/dieariza/Programacionparaelfuturo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
