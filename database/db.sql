@@ -2,6 +2,7 @@ CREATE DATABASE programacionparaelfuturo;
 
 USE programacionparaelfuturo;
 
+-- USERS TABLE
 CREATE TABLE usuarios(
     id INT(6) NOT NULL,
     username VARCHAR(16) NOT NULL,
@@ -16,3 +17,5 @@ ALTER TABLE usuarios
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 1;
 
 DESCRIBE usuarios;
+
+-- COURSES TABLE
