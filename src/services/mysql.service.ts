@@ -6,7 +6,7 @@ const getConnection = () => {
         password: 'prueba123',
         database: 'programacionparaelfuturo',
         port: 3306,
-        host: 'localhost'
+        host: 'localhost',
     } )
 }
 
