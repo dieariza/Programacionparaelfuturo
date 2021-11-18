@@ -1,5 +1,13 @@
+import mysql from 'mysql';
+
 const getConnection = () => {
-    //codigo para hacer la conexion
+    const connection = mysql.createConnection({
+        user: 'root',
+        password: 'prueba123',
+        database: 'programacionparaelfuturo',
+        port: 3306,
+        host: 'localhost'
+    } )
 }
 
 const executeQuery = (query: string) => {
