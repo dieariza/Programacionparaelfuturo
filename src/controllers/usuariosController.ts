@@ -26,7 +26,7 @@ const obtenerUsuario = async(req, res, next) => {
 const agregarUsuario = async(req, res, next) => {
     const {Nombre_usuario, Fecha_nacimiento, Genero_usuario, Correo_usuario, Ciudad_usuario, Nombre_colegio} = req.body
     try{
-        const response = await executeQuery(`INSERT INTO usuario (Nombre_usuario, Fecha_nacimiento, Genero_usuario, Correo_usuario, Ciudad_usuario, Nombre_colegio) VALUES ('${Nombre_usuario}', '${Fecha_nacimiento}', '${Genero_usuario}', '${Correo_usuario}', '${Ciudad_usuario}', '${Nombre_colegio}')`)
+        const response = await executeQuery(`INSERT INTO usuario (Nombre_usuario, Fecha_nacimiento, Genero_usuario, Correo_usuario, Ciudad_usuario, Nombre_colegio) VALUES ('${Nombre_usuario}', '${Fecha_nacimiento}', '${Genero_usuario}', '${Correo_usuario}', '${Ciudad_usuario}', '${Nombre_colegio}')`);
         console.log(response);
         res.json({message: 'created', id: response.insertId});
     }catch(error){
@@ -39,7 +39,7 @@ const actualizarUsuario = async(req, res, next) => {
     const {id} = req.params;
 
     try{
-    const response = await executeQuery(`UPDATE usuario SET Nombre_usuario = '${Nombre_usuario}', Fecha_nacimiento = '${Fecha_nacimiento}' WHERE idUsuario = '${id}'`)
+    const response = await executeQuery(`UPDATE usuario SET Nombre_usuario = '${Nombre_usuario}', Fecha_nacimiento = '${Fecha_nacimiento}' WHERE idUsuario = '${id}'`);
     console.log(response);
     res.json({message: response.affectedRows > 0 ? 'update' : `No existe registro con id: ${id}`});
     }catch (error){
